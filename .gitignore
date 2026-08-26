@@ -1,0 +1,40 @@
+# Symfony backend
+/BackEnd/FamiDo_BackEnd/.env.local
+/BackEnd/FamiDo_BackEnd/.env.*.local
+/BackEnd/FamiDo_BackEnd/.env.local.php
+/BackEnd/FamiDo_BackEnd/config/secrets/prod/prod.decrypt.private.php
+/BackEnd/FamiDo_BackEnd/var/
+/BackEnd/FamiDo_BackEnd/vendor/
+/BackEnd/FamiDo_BackEnd/public/bundles/
+
+# Frontend dependencies and generated files
+/FrontEnd/node_modules/
+/FrontEnd/dist/
+/FrontEnd/build/
+/FrontEnd/.sass-cache/
+
+# Environment files containing local secrets
+*.local
+.env.local
+.env.*.local
+
+# Operating system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors and IDEs
+.idea/
+.vscode/settings.json
+.vscode/*.code-snippets
+*.swp
+*.swo
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+
+# Keep README versioned; the development journal stays local
+!README.md
+/JOURNAL_DE_BORD.md

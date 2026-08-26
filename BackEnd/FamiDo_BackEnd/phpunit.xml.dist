@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/autoload.php"
+         colors="true">
+    <testsuite name="FamiDo">
+        <directory>tests</directory>
+    </testsuite>
+    <php>
+        <server name="KERNEL_CLASS" value="App\Kernel" />
+        <server name="APP_ENV" value="test" force="true" />
+        <server name="DATABASE_URL" value="mysql://root:@127.0.0.1:3306/famido_test?serverVersion=mariadb-10.4.32&amp;charset=utf8mb4" force="true" />
+        <server name="DEFAULT_URI" value="http://localhost" force="true" />
+        <server name="SHELL_VERBOSITY" value="-1" />
+    </php>
+</phpunit>
