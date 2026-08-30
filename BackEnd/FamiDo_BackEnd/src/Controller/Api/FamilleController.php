@@ -68,7 +68,7 @@ class FamilleController extends AbstractController
     #[Route('/rejoindre', name: 'api_famille_join', methods: ['POST'])]
     #[OA\RequestBody(content: new OA\JsonContent(
         required: ['codeInvitation'],
-        properties: [new OA\Property(property: 'codeInvitation', type: 'integer', example: 123456)],
+        properties: [new OA\Property(property: 'codeInvitation', type: 'string', example: '123456')],
     ))]
     #[OA\Response(response: 200, description: 'Famille rejointe')]
     #[OA\Response(response: 404, description: 'Code invalide')]

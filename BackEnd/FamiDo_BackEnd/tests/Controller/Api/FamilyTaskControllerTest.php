@@ -51,6 +51,36 @@ final class FamilyTaskControllerTest extends WebTestCase
         self::assertSame('a_faire', $response['statut']);
     }
 
+    public function testChefCanAssignATaskToSeveralMembers(): void
+    {
+        $client = static::createClient();
+        $chef = $this->createAccount($client, 'ROLE_CHEF');
+        $family = $this->createFamily($client, $chef['token']);
+        $memberOne = $this->createAccount($client, 'ROLE_MEMBRE');
+        $memberTwo = $this->createAccount($client, 'ROLE_MEMBRE');
+        $this->joinFamily($client, $memberOne['token'], $family['codeInvitation']);
+        $this->joinFamily($client, $memberTwo['token'], $family['codeInvitation']);
+
+        $client->request(
+            'POST',
+            '/api/taches',
+            server: $this->jsonServer($chef['token']),
+            content: json_encode(['titre' => 'Ranger la cuisine', 'priorite' => 'normale'], JSON_THROW_ON_ERROR),
+        );
+        self::assertResponseStatusCodeSame(201);
+        $task = $this->responseData($client);
+
+        $client->request(
+            'PUT',
+            sprintf('/api/taches/%d/assignations', $task['id']),
+            server: $this->jsonServer($chef['token']),
+            content: json_encode(['userIds' => [$memberOne['user']['id'], $memberTwo['user']['id']]], JSON_THROW_ON_ERROR),
+        );
+
+        self::assertResponseStatusCodeSame(200);
+        self::assertSame([$memberOne['user']['id'], $memberTwo['user']['id']], $this->responseData($client)['assignations']);
+    }
+
     public function testPrivateTaskIsNotVisibleInFamilyTasks(): void
     {
         $client = static::createClient();

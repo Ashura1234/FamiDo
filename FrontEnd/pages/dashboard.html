@@ -1,0 +1,33 @@
+<section class="page dashboard-page">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow" data-dashboard-date></p>
+      <h1>Bonjour, <span data-dashboard-name>Utilisateur</span></h1>
+    </div>
+    <div class="avatar" data-dashboard-initials>--</div>
+  </div>
+  <div class="stats">
+    <article>
+      <span>Tâches à faire</span><strong data-todo-count>0</strong>
+    </article>
+    <article>
+      <span>Tâches terminées</span><strong data-done-count>0</strong>
+    </article>
+  </div>
+  <section class="panel">
+    <div class="panel-heading">
+      <h2>Mes tâches du jour</h2>
+      <span data-dashboard-count>Chargement...</span>
+    </div>
+    <div data-dashboard-tasks>
+      <p class="form-message">Chargement des tâches...</p>
+    </div>
+  </section>
+  <div class="button-row">
+    <a class="button button-primary" href="/taches" data-link
+      >Tâches familiales</a
+    ><a class="button button-dark" href="/mes-taches" data-link
+      >Mes tâches privées</a
+    >
+  </div>
+</section>

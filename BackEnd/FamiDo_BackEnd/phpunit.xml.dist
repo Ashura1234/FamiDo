@@ -11,6 +11,7 @@
         <server name="APP_ENV" value="test" force="true" />
         <server name="DATABASE_URL" value="mysql://root:@127.0.0.1:3306/famido_test?serverVersion=mariadb-10.4.32&amp;charset=utf8mb4" force="true" />
         <server name="DEFAULT_URI" value="http://localhost" force="true" />
+        <server name="CORS_ALLOW_ORIGIN" value="^https?://(localhost|127\.0\.0\.1)(:[0-9]+)?$" force="true" />
         <server name="SHELL_VERBOSITY" value="-1" />
     </php>
 </phpunit>

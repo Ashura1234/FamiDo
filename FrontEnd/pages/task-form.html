@@ -1,0 +1,48 @@
+<section class="page">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Nouvelle mission</p>
+      <h1>Formulaire de tâche familiale</h1>
+    </div>
+  </div>
+  <form class="form-card task-form" data-form="task">
+    <label for="task-title">Titre</label
+    ><input
+      id="task-title"
+      name="titre"
+      placeholder="Ex: Arroser les plantes"
+      required
+    /><label for="task-description">Description</label
+    ><textarea
+      id="task-description"
+      name="description"
+      placeholder="Ex: Arroser les plantes"
+    ></textarea>
+    <div class="form-grid">
+      <div>
+        <label for="task-priority">Priorité</label
+        ><select id="task-priority" name="priorite">
+          <option value="basse">Basse</option>
+          <option value="normale" selected>Normale</option>
+          <option value="haute">Haute</option>
+        </select>
+      </div>
+      <div>
+        <label for="task-date">Date d'échéance</label
+        ><input id="task-date" name="dateEcheance" type="date" />
+      </div>
+    </div>
+    <fieldset>
+      <legend>Assigner à</legend>
+      <div data-family-members>
+        <p class="form-message">Chargement des membres...</p>
+      </div>
+    </fieldset>
+    <div class="button-row">
+      <button class="button button-primary" type="submit">
+        Créer et assigner</button
+      ><a class="button button-outline" href="/taches" data-link>Annuler</a>
+    </div>
+    <p class="form-message" data-message></p>
+  </form>
+</section>

@@ -1,0 +1,41 @@
+<section class="page">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Espace personnel</p>
+      <h1>Nouvelle tâche privée</h1>
+    </div>
+  </div>
+  <form class="form-card task-form" data-form="private-task">
+    <label for="private-task-title">Titre</label
+    ><input
+      id="private-task-title"
+      name="titre"
+      placeholder="Ex: Lire 20 pages"
+      required
+    /><label for="private-task-description">Description</label
+    ><textarea
+      id="private-task-description"
+      name="description"
+      placeholder="Une note personnelle"
+    ></textarea>
+    <div class="form-grid">
+      <div>
+        <label for="private-task-priority">Priorité</label
+        ><select id="private-task-priority" name="priorite">
+          <option value="basse">Basse</option>
+          <option value="normale" selected>Normale</option>
+          <option value="haute">Haute</option>
+        </select>
+      </div>
+      <div>
+        <label for="private-task-date">Date d'échéance</label
+        ><input id="private-task-date" name="dateEcheance" type="date" />
+      </div>
+    </div>
+    <div class="button-row">
+      <button class="button button-primary" type="submit">Créer</button
+      ><a class="button button-outline" href="/mes-taches" data-link>Annuler</a>
+    </div>
+    <p class="form-message" data-message></p>
+  </form>
+</section>

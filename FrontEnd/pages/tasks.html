@@ -1,0 +1,30 @@
+<section class="page">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Organisation commune</p>
+      <h1>Tâches familiales</h1>
+    </div>
+    <a
+      class="button button-light"
+      href="/taches/nouvelle"
+      data-link
+      data-chef-only
+      >+ Ajouter</a
+    >
+  </div>
+  <div class="filters">
+    <select aria-label="Filtrer par statut" data-filter-status>
+      <option value="all">Statut : Tous</option>
+      <option value="a_faire">À faire</option>
+      <option value="terminee">Terminées</option></select
+    ><select aria-label="Filtrer par priorité" data-filter-priority>
+      <option value="all">Priorité : Toutes</option>
+      <option value="haute">Haute</option>
+      <option value="normale">Normale</option>
+      <option value="basse">Basse</option>
+    </select>
+  </div>
+  <div data-tasks-list>
+    <p class="form-message">Chargement des tâches...</p>
+  </div>
+</section>

@@ -1,0 +1,52 @@
+<section class="page family-page">
+  <div class="page-heading">
+    <div>
+      <p class="eyebrow">Notre tribu</p>
+      <h1 data-family-name>Ma famille</h1>
+    </div>
+    <span class="avatar">⌂</span>
+  </div>
+  <section class="panel family-setup" data-family-setup>
+    <p>Crée ta famille ou rejoins celle d'un proche pour commencer.</p>
+    <form class="form-card" data-form="create-family">
+      <label for="family-name">Nom de la famille</label
+      ><input
+        id="family-name"
+        name="nom"
+        placeholder="Ex: Famille Rocher"
+        required
+      /><button class="button button-primary" type="submit">
+        Créer ma famille
+      </button>
+      <p class="form-message" data-message></p>
+    </form>
+    <form class="form-card" data-form="join-family">
+      <label for="family-code">Code d'invitation</label
+      ><input
+        id="family-code"
+        name="codeInvitation"
+        placeholder="Ex: 123456"
+        required
+      /><button class="button button-light" type="submit">
+        Rejoindre une famille
+      </button>
+      <p class="form-message" data-message></p>
+    </form>
+  </section>
+  <section class="invite panel" data-family-content hidden>
+    <div>
+      <span class="eyebrow text-white">Code d'invitation</span
+      ><strong class="text-white" data-code></strong>
+    </div>
+    <button class="button text-white button-light" type="button" data-copy>
+      Copier
+    </button>
+  </section>
+  <section class="panel" data-family-content hidden>
+    <div class="panel-heading">
+      <h2>Membres</h2>
+      <span data-member-count></span>
+    </div>
+    <div data-members></div>
+  </section>
+</section>

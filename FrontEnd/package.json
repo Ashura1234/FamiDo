@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build:css": "sass assets/styles/main.scss assets/styles/main.css --style=expanded",
+    "watch:css": "sass --watch assets/styles/main.scss:assets/styles/main.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "bootstrap-icons": "^1.13.1"
+  },
+  "devDependencies": {
+    "sass": "^1.103.1"
+  }
+}

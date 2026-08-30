@@ -314,7 +314,7 @@ class TacheController extends AbstractController
             }
 
             $assignment = new AssignationTache();
-            $assignment->setTache($task);
+            $task->addAssignation($assignment);
             $assignment->setUser($member);
             $entityManager->persist($assignment);
         }
