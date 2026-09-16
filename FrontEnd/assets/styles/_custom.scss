@@ -69,14 +69,15 @@ a {
   font-size: 1.2rem;
 }
 .brand-mark {
-  color: var(--fami-primary);
+  color: black;
   font-size: 1.7rem;
   line-height: 1;
 }
 .version {
   padding: 0.3rem 1rem;
   border-radius: 50rem;
-  background: var(--fami-primary);
+  background: black;
+  color:white;
   font: 700 0.9rem var(--bs-font-sans-serif);
 }
 

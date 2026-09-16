@@ -2,12 +2,14 @@ const API_URL = "http://127.0.0.1:8000/api";
 
 export async function apiFetch(endpoint, options = {}) {
   const token = localStorage.getItem("token");
+
   const response = await fetch(`${API_URL}${endpoint}`, {
-    ...options,
+    method: options.method || "GET",
+    body: options.body || null,
     headers: {
       "Content-Type": "application/json",
       ...(token ? { Authorization: `Bearer ${token}` } : {}),
-      ...options.headers,
+      ...(options.headers || {}),
     },
   });
 
@@ -15,6 +17,7 @@ export async function apiFetch(endpoint, options = {}) {
   if (!response.ok) throw new Error(data.error || "Une erreur est survenue.");
   return data;
 }
+
 
 export const saveSession = (data) => {
   localStorage.setItem("token", data.token);
